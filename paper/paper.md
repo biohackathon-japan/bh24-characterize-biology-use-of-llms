@@ -1,7 +1,6 @@
 ---
 title: 'Exploring Bioinformatics in the Wild: Insights from Real LLM Conversations'
 title_short: 'Wildchat analysis'
-latex_engine: xelatex
 tags:
   - Wildchat
   - Large Language Model
@@ -148,7 +147,7 @@ First, it appears that a user intended to translate a caption from a paper from 
 Pull out a few question and answer pairs
 
 ```
-Prompt: 翻译为英文“A图为上调基因的GO,KEGG分析可视化的气泡图；B图为下调基因的GO,KEGG分析可视化的气泡图；C图为上调基因的富集术语的弦图；D图为下调基因的富集术语的弦图”
+Prompt: \\翻译为英文“A图为上调基因的GO,KEGG分析可视化的气泡图；B图为下调基因的GO,KEGG分析可视化的气泡图；C图为上调基因的富集术语的弦图；D图为下调基因的富集术语的弦图”
 Response: "The figure A shows the bubble chart for the upregulated genes in GO and KEGG analysis. The figure B shows the bubble chart for the downregulated genes in GO and KEGG analysis. The figure C shows the chord diagram for the enriched terms of upregulated genes. The figure D shows the chord diagram for the enriched terms of downregulated genes."
 ```
 
