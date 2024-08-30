@@ -114,7 +114,7 @@ Our evaluation of the model performance involved analyzing how well it handled t
 We also compared the DBCLS model with other models, focusing on their performance in biological reasoning and the quality of their responses to bioinformatics-related queries. This comparison provided a benchmark for understanding how well different models address the biological and health science topics. 
 
 | Short Identifier | Full Model Name | Description | reference |
-| ---------------- | --------------- | ----------- | --------- |
+| ------------ | ----------- | --------------- | ------------- |
 | gpt-35-turbo | GPT-3.5 Turbo | A variant of GPT-3.5 designed for improved speed and cost-efficiency in generating text. | https://papers.nips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf |
 |gpt-4o | GPT-4 Optimized | An optimized version of GPT-4, offering enhanced performance for various language tasks. | OpenAI. Hello gpt-4o. https://openai.com/index/hello-gpt-4o/, 2024 |
 | gpt-4 | GPT-4 | The fourth-generation GPT model, known for its advanced understanding and generation abilities. | https://arxiv.org/pdf/2303.08774 |
