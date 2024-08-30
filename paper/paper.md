@@ -1,6 +1,7 @@
 ---
 title: 'Exploring Bioinformatics in the Wild: Insights from Real LLM Conversations'
 title_short: 'Wildchat analysis'
+latex_engine: xelatex
 tags:
   - Wildchat
   - Large Language Model
