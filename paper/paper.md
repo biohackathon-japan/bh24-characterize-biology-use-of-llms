@@ -103,6 +103,5 @@ The prompts were categorized into different keywords with the inclusion of a “
 
 ![t-SNE plot of the projected unique embedded prompts. Different colors represent different keyword groups. \label{Fig5}](./fig5.pdf)
 
-![Distances between different embedded prompts represented with a heatmap (top) and a dendrogram (bottom). Both x and y axes of the heatmap were labeled with the keywords using different colors. The cut-off for the dendrogram was heuristically selected at 67 to subset the prompts into 7 clusters, 1 to 7 from left to right”. \label{Fig6}](./fig6.pdf)
-
-![\label{Fig6}](./fig7.pdf)
+![caption](./fig6.pdf)\
+![my Distances between different embedded prompts represented with a heatmap (top) and a dendrogram (bottom). Both x and y axes of the heatmap were labeled with the keywords using different colors. The cut-off for the dendrogram was heuristically selected at 67 to subset the prompts into 7 clusters, 1 to 7 from left to right”. \label{Fig6}](./fig7.pdf)
