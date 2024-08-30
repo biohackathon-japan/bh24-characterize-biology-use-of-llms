@@ -116,12 +116,13 @@ We also compared the DBCLS model with other models, focusing on their performanc
 | Short Identifier | Full Model Name | Description | reference |
 | ------------ | ----------- | --------------- | ------------- |
 | gpt-35-turbo | GPT-3.5 Turbo | A variant of GPT-3.5 designed for improved speed and cost-efficiency in generating text. | https://papers.nips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf |
-|gpt-4o | GPT-4 Optimized | An optimized version of GPT-4, offering enhanced performance for various language tasks. | OpenAI. Hello gpt-4o. https://openai.com/index/hello-gpt-4o/, 2024 |
+| gpt-4o | GPT-4 Optimized | An optimized version of GPT-4, offering enhanced performance for various language tasks. | OpenAI. Hello gpt-4o. https://openai.com/index/hello-gpt-4o/, 2024 |
 | gpt-4 | GPT-4 | The fourth-generation GPT model, known for its advanced understanding and generation abilities. | https://arxiv.org/pdf/2303.08774 |
 | claude3opus | Claude 3 Opus | A variant of Claude 3 designed for comprehensive and general-purpose conversational tasks. | https://arxiv.org/pdf/2404.13813, https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf |
 | claude3sonnet5 | Claude Sonnet 3.5 | An enhanced version Anthropic Claude 3 Sonnet with improvements in text generation and comprehension. | https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf |
 | claude3sonnet | Claude 3 Sonnet | A Claude model variant fine-tuned for creative text generation, such as writing poems or stories. | https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf |
-| claude3haiku | Claude 3 Haiku | A Claude model variant specialized for speed. | https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf | commandrplus | Command R Plus | An advanced model designed for natural language command execution and programming tasks. |  |https://docs.cohere.com/docs/command-r-plus
+| claude3haiku | Claude 3 Haiku | A Claude model variant specialized for speed. | https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf | 
+| commandrplus | Command R Plus | An advanced model designed for natural language command execution and programming tasks. |  |https://docs.cohere.com/docs/command-r-plus |
 | commandrbasic | Command R Basic | A simpler version of the Command R series, suitable for executing straightforward commands. | https://docs.cohere.com/docs/command-r |
 | llamallama3-70b | Llama 3 - 70 Billion Parameters | A large-scale model from the Llama series with 70 billion parameters, designed for various NLP tasks. | https://ai.meta.com/blog/meta-llama-3/, https://ollama.com/library/llama3:70b |
 | llamallama3-8b | Llama 3 - 8 Billion Parameters | A smaller model in the Llama 3 series with 8 billion parameters, optimized for efficiency. | https://ai.meta.com/blog/meta-llama-3/, https://ollama.com/library/llama3:8b |
