@@ -58,3 +58,7 @@ In addition to SciQ, other research has explored the use of conversational datas
 However, these approaches face several limitations. Many models, while adept at general language understanding, struggle with the specialized vocabulary and context inherent in bioinformatics. Additionally, the existing datasets often lack the depth required for handling nuanced biological queries, which can limit the effectiveness of the models in real-world applications.
 
 By addressing these limitations and expanding the scope of conversational datasets, researchers can develop more robust and context-aware bioinformatics tools. Exploring how conversational data can enhance model performance in handling biological questions offers a promising direction for future research and development in this field.
+
+# Dataset and Filtering
+
+![This figure outlines the analysis and software used. The WildChat dataset was filtered using hand-selected keywords. These prompts were then used to generate responses from a variety of other models. The prompts and responses were vectorized using a sentence embedding model, which were used in performing the analysis of the original and newly generated data. \label{Fig1}](./fig1.pdf)
