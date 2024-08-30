@@ -147,40 +147,48 @@ First, it appears that a user intended to translate a caption from a paper from 
 
 Pull out a few question and answer pairs
 
-  Prompt: 翻译为英文“A图为上调基因的GO,KEGG分析可视化的气泡图；B图为下调基因的GO,KEGG分析可视化的气泡图；C图为上调基因的富集术语的弦图；D图为下调基因的富集术语的弦图”
-
-   Response: "The figure A shows the bubble chart for the upregulated genes in GO and KEGG analysis. The figure B shows the bubble chart for the downregulated genes in GO and KEGG analysis. The figure C shows the chord diagram for the enriched terms of upregulated genes. The figure D shows the chord diagram for the enriched terms of downregulated genes."
+```
+Prompt: 翻译为英文“A图为上调基因的GO,KEGG分析可视化的气泡图；B图为下调基因的GO,KEGG分析可视化的气泡图；C图为上调基因的富集术语的弦图；D图为下调基因的富集术语的弦图”
+Response: "The figure A shows the bubble chart for the upregulated genes in GO and KEGG analysis. The figure B shows the bubble chart for the downregulated genes in GO and KEGG analysis. The figure C shows the chord diagram for the enriched terms of upregulated genes. The figure D shows the chord diagram for the enriched terms of downregulated genes."
+```
 
 ### Investigating Lab Procedures
 
-  Prompt: A rapid and cost-effective method for genotyping apolipoprotein E gene polymorphism
+```
+Prompt: A rapid and cost-effective method for genotyping apolipoprotein E gene polymorphism
+```
 
 Successful responses followed the instruction by providing the user with a method that mentioned things like DNA extraction, PCR in a series of steps. ChatGPT, CommandR, and Claude all created reasonable sounding responses that would help in genotyping APOE at times including details of reagent preparation. An extract of an exemplary response provided by Chat GPT-4o is provided below.
 
-Response
-  Model gpt-4o: 
-  2. **PCR Amplification**:
-    - Design primers flanking the polymorphic region of the APOE gene.
-    - Set up the PCR reaction mix:
-    - 1x PCR buffer
-    - 200 µM dNTPs
-    - 0.2 µM of each primer
-    - 1.5 mM MgCl2
-    - 1 U Taq DNA polymerase
-  	- 50-100 ng of genomic DNA
-    - PCR cycling conditions might be:
- 	  - Initial denaturation at 95°C for 5 minutes
- 	  - 35 cycles of:
-   	- Denaturation at 95°C for 30 seconds
-   	- Annealing at 58-60°C for 30 seconds
-   	- Extension at 72°C for 1 minute
- 	  - Final extension at 72°C for 5 minutes
-  
+```
+Model gpt-4o Response: 
+2. **PCR Amplification**:
+
+  - Design primers flanking the polymorphic region of the APOE gene.
+  - Set up the PCR reaction mix:
+  - 1x PCR buffer
+  - 200 µM dNTPs
+  - 0.2 µM of each primer
+  - 1.5 mM MgCl2
+  - 1 U Taq DNA polymerase
+  - 50-100 ng of genomic DNA
+  - PCR cycling conditions might be:
+  - Initial denaturation at 95°C for 5 minutes
+  - 35 cycles of:
+  - Denaturation at 95°C for 30 seconds
+  - Annealing at 58-60°C for 30 seconds
+  - Extension at 72°C for 1 minute
+  - Final extension at 72°C for 5 minutes
+```
+
 It is also worth noting the accuracy of the Claude 3 Opus model in correctly retrieving the RefSNP ID of two variants on the APOE gene when responding to the genotyping query. An extract of the response is provided below (our emphasis):
 
-Model: claude3opus
-  Response:
-  2. PCR amplification:
-   - Design primers specific to the APOE gene region containing the polymorphisms of interest (e.g., rs429358 and rs7412).
+```
+Model: claude3opus Response:
+  
+2. PCR amplification:
+
+ - Design primers specific to the APOE gene region containing the polymorphisms of interest (e.g., rs429358 and rs7412).
+```
 
 Note that both rs429358 and rs7412 are indeed located in the APOE gene.
