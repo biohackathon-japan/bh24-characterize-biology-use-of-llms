@@ -122,7 +122,7 @@ We also compared the DBCLS model with other models, focusing on their performanc
 | claude3sonnet5 | Claude Sonnet 3.5 | An enhanced version Anthropic Claude 3 Sonnet with improvements in text generation and comprehension. | https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf |
 | claude3sonnet | Claude 3 Sonnet | A Claude model variant fine-tuned for creative text generation, such as writing poems or stories. | https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf |
 | claude3haiku | Claude 3 Haiku | A Claude model variant specialized for speed. | https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf | 
-| commandrplus | Command R Plus | An advanced model designed for natural language command execution and programming tasks. |  |https://docs.cohere.com/docs/command-r-plus |
+| commandrplus | Command R Plus | An advanced model designed for natural language command execution and programming tasks. |  https://docs.cohere.com/docs/command-r-plus |
 | commandrbasic | Command R Basic | A simpler version of the Command R series, suitable for executing straightforward commands. | https://docs.cohere.com/docs/command-r |
 | llamallama3-70b | Llama 3 - 70 Billion Parameters | A large-scale model from the Llama series with 70 billion parameters, designed for various NLP tasks. | https://ai.meta.com/blog/meta-llama-3/, https://ollama.com/library/llama3:70b |
 | llamallama3-8b | Llama 3 - 8 Billion Parameters | A smaller model in the Llama 3 series with 8 billion parameters, optimized for efficiency. | https://ai.meta.com/blog/meta-llama-3/, https://ollama.com/library/llama3:8b |
