@@ -148,7 +148,10 @@ Pull out a few question and answer pairs
 
 ![caption](./fig_prompt.png)\
 ```
-Response: "The figure A shows the bubble chart for the upregulated genes in GO and KEGG analysis. The figure B shows the bubble chart for the downregulated genes in GO and KEGG analysis. The figure C shows the chord diagram for the enriched terms of upregulated genes. The figure D shows the chord diagram for the enriched terms of downregulated genes."
+Response: "The figure A shows the bubble chart for the upregulated genes in GO and KEGG analysis.
+The figure B shows the bubble chart for the downregulated genes in GO and KEGG analysis.
+The figure C shows the chord diagram for the enriched terms of upregulated genes.
+The figure D shows the chord diagram for the enriched terms of downregulated genes."
 ```
 
 ### Investigating Lab Procedures
@@ -200,8 +203,15 @@ A common use case observed in the dataset where users request the model to summa
 Prompt: Results
 Part B write up 7
 Jetul and Japneet April 9, 2023
-Image 1: Picture of first 1% gel electrophoresis performed to confirm the presence of rspL gene after digestion of genomic DNA with BamHI
-The above image was captured from UV light analysis of the 1% agarose gel prepared in 1X TAE buffer with 2.5 µL INtRON RedSafeTM and 6X loading dye. The well labelled 1 was utilized for 1Kb plus DNA ladder RTU (FroggoBI0- BIOHELIX), 5 µL loaded as standard whilst the well labelled 2 contains the digested genomic DNA (10 µL digested sample + 2 µL loading dye). The above gel electrophoresis was run at 120 V for 20 minutes. Genomic uncut was not loaded which was considered an error. Moreover, there were no bands at all and the problem was low concentration of genomic DNA. 
+Image 1: Picture of first 1% gel electrophoresis performed to confirm
+the presence of rspL gene after digestion of genomic DNA with BamHI
+The above image was captured from UV light analysis of the 1% agarose
+gel prepared in 1X TAE buffer with 2.5 µL INtRON RedSafeTM and 6X loading dye.
+The well labelled 1 was utilized for 1Kb plus DNA ladder RTU (FroggoBI0- BIOHELIX),
+5 µL loaded as standard whilst the well labelled 2 contains the digested genomic
+DNA (10 µL digested sample + 2 µL loading dye). The above gel electrophoresis was
+run at 120 V for 20 minutes. Genomic uncut was not loaded which was considered an error.
+Moreover, there were no bands at all and the problem was low concentration of genomic DNA. 
 ```
 
 Another notable prompt where a user pastes what appears to be the content of an assignmen (note the bold portion, our emphasis)t:
