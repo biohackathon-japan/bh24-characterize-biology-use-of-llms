@@ -7,7 +7,7 @@ tags:
   - Comparative analysis
 authors:
   - name: David Steinberg
-    orcid:
+    orcid: 0000-0001-6683-2270
     affiliation: 1
   - name: Hirokazu Chiba
     orcid:
