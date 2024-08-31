@@ -115,22 +115,22 @@ We also compared the DBCLS model with other models, focusing on their performanc
 
 | Short Identifier | Full Model Name | Description | reference |
 | ------------ | ----------- | --------------- | ------------- |
-| gpt-35-turbo | GPT-3.5 Turbo | A variant of GPT-3.5 designed for improved speed and cost-efficiency in generating text. | https://papers.nips.cc/paper_files/paper/2020/file/1457c0d6bfcb4967418bfb8ac142f64a-Paper.pdf |
-| gpt-4o | GPT-4 Optimized | An optimized version of GPT-4, offering enhanced performance for various language tasks. | OpenAI. Hello gpt-4o. https://openai.com/index/hello-gpt-4o/, 2024 |
+| gpt-35-turbo | GPT-3.5 Turbo | A variant of GPT-3.5 designed for improved speed and cost-efficiency in generating text. | [@citesAsAuthority:brown2020languagemodelsfewshotlearners] |
+| gpt-4o | GPT-4 Optimized | An optimized version of GPT-4, offering enhanced performance for various language tasks. | [@citesAsAuthority:openai2024gpt4o] |
 | gpt-4 | GPT-4 | The fourth-generation GPT model, known for its advanced understanding and generation abilities. | https://arxiv.org/pdf/2303.08774 [@citesAsAuthority:openai2024gpt4technicalreport] |
-| claude3opus | Claude 3 Opus | A variant of Claude 3 designed for comprehensive and general-purpose conversational tasks. | https://arxiv.org/pdf/2404.13813, https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf |
-| claude3sonnet5 | Claude Sonnet 3.5 | An enhanced version Anthropic Claude 3 Sonnet with improvements in text generation and comprehension. | https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf |
-| claude3sonnet | Claude 3 Sonnet | A Claude model variant fine-tuned for creative text generation, such as writing poems or stories. | https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf |
-| claude3haiku | Claude 3 Haiku | A Claude model variant specialized for speed. | https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf | 
-| commandrplus | Command R Plus | An advanced model designed for natural language command execution and programming tasks. |  https://docs.cohere.com/docs/command-r-plus |
-| commandrbasic | Command R Basic | A simpler version of the Command R series, suitable for executing straightforward commands. | https://docs.cohere.com/docs/command-r |
-| llamallama3-70b | Llama 3 - 70 Billion Parameters | A large-scale model from the Llama series with 70 billion parameters, designed for various NLP tasks. | https://ai.meta.com/blog/meta-llama-3/, https://ollama.com/library/llama3:70b [@citesAsAuthority:dubey2024llama3herdmodels] |
-| llamallama3-8b | Llama 3 - 8 Billion Parameters | A smaller model in the Llama 3 series with 8 billion parameters, optimized for efficiency. | https://ai.meta.com/blog/meta-llama-3/, https://ollama.com/library/llama3:8b |
-| llamallama2-70b | Llama 2 - 70 Billion Parameters | An earlier model in the Llama series, featuring 70 billion parameters for a range of tasks. | https://arxiv.org/pdf/2307.09288 |
-| llamallama2-13b | Llama 2 - 13 Billion Parameters | A mid-sized model from the Llama 2 series with 13 billion parameters, balancing power and cost. | https://arxiv.org/pdf/2307.09288 [@citesAsAuthority:touvron2023llama2openfoundation] |
-| mistralmistral-7b | Mistral - 7 Billion Parameters | A compact model from the Mistral series with 7 billion parameters, focused on effective NLP. | https://arxiv.org/pdf/2310.06825, https://docs.mistral.ai/getting-started/models/ [@citesAsAuthority:jiang2024mixtralexperts] |
-| mistralmixtral-8x7b | Mixtral - 8x7 Billion Parameters | An ensemble model combining eight 7-billion parameter models from the Mistral series. | https://arxiv.org/pdf/2401.04088, https://docs.mistral.ai/getting-started/models/ |
-| mistralmistral-large | Mistral Large | A more extensive model in the Mistral series with enhanced capabilities for diverse applications. | https://docs.mistral.ai/getting-started/models/  |
+| claude3opus | Claude 3 Opus | A variant of Claude 3 designed for comprehensive and general-purpose conversational tasks. | [@citesAsAuthority:claude3] |
+| claude3sonnet5 | Claude Sonnet 3.5 | An enhanced version Anthropic Claude 3 Sonnet with improvements in text generation and comprehension. | [@citesAsAuthority:claude3] |
+| claude3sonnet | Claude 3 Sonnet | A Claude model variant | [@citesAsAuthority:claude3] |
+| claude3haiku | Claude 3 Haiku | A Claude model variant specialized for speed. | [@citesAsAuthority:claude3] | 
+| commandrplus | Command R Plus | An Open Source model designed for natural language and business tasks. |  [@citesAsAuthority:cohere2024commandrplus] |
+| commandrbasic | Command R Basic | A simpler version of the Command R series, suitable for executing straightforward commands. | [@citesAsAuthority:cohere2024commandr] |
+| llamallama3-70b | Llama 3 - 70 Billion Parameters | A large-scale model from the Llama series with 70 billion parameters, designed for various NLP tasks. | [@citesAsAuthority:dubey2024llama3herdmodels] |
+| llamallama3-8b | Llama 3 - 8 Billion Parameters | A smaller model in the Llama 3 series with 8 billion parameters, optimized for efficiency. | [@citesAsAuthority:dubey2024llama3herdmodels] |
+| llamallama2-70b | Llama 2 - 70 Billion Parameters | An earlier model in the Llama series, featuring 70 billion parameters for a range of tasks. | [@citesAsAuthority:touvron2023llama2openfoundation] |
+| llamallama2-13b | Llama 2 - 13 Billion Parameters | A mid-sized model from the Llama 2 series with 13 billion parameters, balancing power and cost. | [@citesAsAuthority:touvron2023llama2openfoundation] |
+| mistralmistral-7b | Mistral - 7 Billion Parameters | A compact model from the Mistral series with 7 billion parameters, focused on effective NLP. | [@citesAsAuthority:jiang2024mixtralexperts] |
+| mistralmixtral-8x7b | Mixtral - 8x7 Billion Parameters | An ensemble model combining eight 7-billion parameter models from the Mistral series. | [@citesAsAuthority:jiang2024mixtralexperts] |
+| mistralmistral-large | Mistral Large | A more extensive model in the Mistral series with enhanced capabilities for diverse applications. | [@citesAsAuthority:jiang2024mixtralexperts]  |
 
 The evaluation included an assessment of each model's capabilities in reasoning about biological concepts, handling complex queries, and generating informative responses. This comparison helps to contextualize the DBCLS model's performance within the broader landscape of conversational AI in bioinformatics. We generated embeddings for each response from the filtered dataset using Mixed Bread AI Large v1 [@citesAsAuthority:emb2024mxbai] via the Hugging Face sentence transformers library. We then used these embeddings to generate distance calculations to the original response from WildChat. In addition, Levenshtein distance was used to compare responses from models to the original response.
 
