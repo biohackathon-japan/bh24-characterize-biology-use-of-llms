@@ -10,13 +10,13 @@ authors:
     orcid: 0000-0001-6683-2270
     affiliation: 1
   - name: Hirokazu Chiba
-    orcid:
+    orcid: 0000-0003-4062-8903
     affiliation: 2
   - name: Wasin Poncheewin
     orcid: 0000-0003-2267-6872
     affiliation: 3
   - name: Susumu Goto
-    orcid:
+    orcid: 0000-0003-2989-8486
     affiliation: 2
 affiliations:
   - name: University of California, Santa Cruz Genomics Institute, 1156 High St Santa Cruz, CA 95064
