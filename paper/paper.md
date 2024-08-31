@@ -285,11 +285,11 @@ Interestingly, the Mistral 7b dataset provided an R-script that may have been us
 
 ```
 Model: mistralmistral-7b Response:
-   \```R
+   ```R
    deseq_data <- DESeqDataSetFromMatrix(countData = count_data,
    colData = star_results, design = model.matrix(~condition,
    data = star_results))
-  \```
+  ```
 ```
 
 ### Resistance to Jailbreaking Across Models
