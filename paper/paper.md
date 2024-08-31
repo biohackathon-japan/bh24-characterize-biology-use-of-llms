@@ -142,7 +142,7 @@ In this section we will look at a few handpicked prompts and responses to charac
 
 ### Translation Tasks
 
-First, it appears that a user intended to translate a caption from a paper from Japanese to English.
+First, it appears that a user intended to translate a caption from a paper from Chinese to English.
 
 Pull out a few question and answer pairs
 
@@ -381,14 +381,15 @@ Looking ahead, there are several avenues for enhancing our work and expanding it
 To begin with, refining our filtering techniques could significantly improve the precision of finding bioinformatics-related queries. Future efforts could focus on developing more sophisticated keyword selection methods, leveraging domain-specific ontologies, or incorporating advanced natural language processing tools to better capture relevant conversations. For bioinformatics-related keywords, the topic list from bioinformatics conferences such as ISMB may be useful. In the future we would like to use terms from controlled vocabularies such as the Gene Ontology (GO) and the Experimental Factor Ontology (EFO).
 
 Exploring more advanced embedding models or incorporating contextual information might provide deeper insights into prompt similarities and improve the quality of the filtered dataset. Our work suggested there is value in not only fine-tuning LLMs towards scientific use cases, but also to create embedding models that provide useful vectorization tailored to an area of interest. For example, an embedding model trained on gene descriptions could be used to provide more accurate separation of language within the domain of genomics.
-
 We plan to conduct further experiments with additional models to broaden our understanding of their performance in bioinformatics contexts. This includes testing emerging models and comparing them to the DBCLS model API to identify their relative strengths and weaknesses.
 
 Benchmarking models on expert-curated datasets is another promising direction. Datasets like SciQ would provide a more quantitative approach to understanding the capabilities of an LLM when approaching scientific inquiries.
-
 The use of Retrieval-Augmented Generation (RAG) techniques represents another exciting possibility. Integrating retrieval mechanisms with generative models could improve the models’ ability to provide precise and contextually relevant information based on the latest research.
 
+An exciting direction suggested by our work is the development of a controlled vocabulary for the types of human intents when using conversational AI. By creating an ontology that categorizes and defines various conversational intents, users could more effectively set the context for their interactions with AI systems. This would enable the creation of system prompts or the integration of a retrieval-augmented generation (RAG) database that is tailored to specific use cases. Such an approach would enhance the relevance and accuracy of AI responses, as the system would better understand the desired direction and purpose of the conversation, leading to more meaningful and contextually appropriate engagements.
+
 Finally, our work has broader implications for biological and health science research. Datasets like WildChat provide unique insight into how LLMs are being used. We believe that conversational interfaces present an exciting new human-computer interface and that by making available analyses like the one provided in this paper, we can arrive not only at better models, but also interrogate the ways that LLMs and other interactive models will change the nature of inquiry and creativity. Future applications could explore the potential of conversational AI in various research areas, such as personalized medicine, health informatics, and the development of new bioinformatics tools. By expanding the scope of our research and its applications, we aim to contribute to advancing knowledge and innovation in these critical fields.
+
 
 # Conclusion
 
@@ -398,9 +399,11 @@ Our analysis of the filtered dataset and subsequent comparisons with models quer
 
 The contributions of this work extend beyond the immediate findings. By showcasing the effectiveness of the WildChat dataset and the DBCLS model API in bioinformatics, we provide a foundation for further research and development in this area. Our approach offers a novel methodology for extracting and analyzing domain-specific information from large-scale conversational data, which can be adapted and applied to various other fields of study.
 
-As we look ahead, our study lays the groundwork for future advancements in conversational AI and bioinformatics. The potential to refine filtering techniques, enhance language-space analysis, and explore new model architectures opens exciting possibilities for ongoing research and application. Ultimately, this work underscores the importance of integrating advanced AI technologies with domain-specific knowledge to drive innovation and progress in biological and health science research.
+Our analysis of the WildChat dataset suggests numerous future studies in conversational AI and bioinformatics, including deeper analysis of the WildChat dataset. The potential to refine filtering techniques, enhance language-space analysis, and exploring new model architectures opens possibilities for ongoing research and application. Ultimately, this work underscores the importance of integrating advanced AI technologies with domain-specific knowledge to drive innovation and progress in biological and health science research.
 
 # Acknowledgements
+
+The computation time for DBCLS Model API is supported by the grants from the JST/NBDC database project.
 
 Huge thanks to the Biohackathon organizers and staff!
 
