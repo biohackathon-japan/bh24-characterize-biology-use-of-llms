@@ -1,6 +1,6 @@
 ---
 title: 'Exploring Bioinformatics in the Wild: Insights from Real LLM Conversations'
-title_short: 'Wildchat analysis'
+title_short: 'bioinformatics in wildchat'
 tags:
   - Wildchat
   - Large Language Model
@@ -40,6 +40,8 @@ authors_short: Steinberg D. \emph{et al.}
 ---
 
 # Abstract
+
+The intersection of artificial intelligence (AI) and conversational data offers promising opportunities for advancing research in specialized fields such as biology and health sciences. The WildChat dataset, comprising over one million user-chatbot interactions with GPT-4, serves as a valuable resource for analyzing how advanced language models engage with complex topics. This work aims to explore how conversational AI models interpret and manage bioinformatics-related queries, assessing their effectiveness and identifying areas for improvement. By filtering and analyzing bioinformatics-related interactions within WildChat, the study highlights the current capabilities and limitations of these models, providing insights into their potential roles in supporting and enhancing research, education, and practical applications in bioinformatics and biology. Key findings include that ChatGPT-3.5 can save both time and money while still providing satisfactory performance in handling bioinformatics-related queries, making it a cost-effective option for many applications. However, models like Llama3-8b and Mistral-7b were found to underperform in comparison, struggling with the specialized vocabulary and nuanced contexts inherent in bioinformatics. Additionally, it was observed that Anthropic’s Claude model is notably harder to jailbreak, suggesting stronger safeguards against misuse, which is crucial for maintaining the integrity of conversational AI in sensitive domains. Expanding the scope of conversational datasets to include a broader range of detailed interactions is crucial for developing more robust, context-aware bioinformatics tools. This investigation not only underscores the strengths and weaknesses of current conversational AI systems but also offers a roadmap for future improvements, ultimately contributing to the evolving interface between AI technology and bioinformatics.
 
 # Introduction
 
