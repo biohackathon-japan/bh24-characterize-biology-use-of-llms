@@ -73,7 +73,7 @@ However, as the filtering process progressed, we encountered challenges with cer
 
 The refinement process involved iteratively adjusting our keyword selection based on the relevance of the filtered conversations. We employed additional techniques, including semantic analysis using sentence-transformers [@citesAsAuthority:reimers2019sentencebertsentenceembeddingsusing], to assess the alignment of the conversations with bioinformatics topics. This approach helped in filtering out noise and ensuring that the resulting dataset was more focused on the biological and health science domains.
 
-Through these efforts, we aimed to create a curated subset of the WildChat dataset that better aligns with the objectives of our study, providing a more targeted foundation for subsequent analysis and model evaluation.
+Through these efforts, we aimed to create a curated subset of the WildChat dataset that better aligns with the objectives of our study, providing a more targeted foundation for subsequent analysis and model evaluation. [Figure1]
 
 # Methods
 
@@ -95,7 +95,7 @@ We selected several models for comparison, including both established and experi
 
 ![Language embeddings of prompts were used to create a t-SNE. Hand curation of topics showed grouping of languages and topics. We found that our topic of interest was mostly represented between math, physics/chemistry, and health categories. \label{Fig2}](./fig2.pdf)
 
-We begin by summarizing the characteristics of the conversations that remained after applying our filtering criteria. This analysis provides an overview of the types of discussions that were successfully identified as bioinformatics-related, including the frequency and diversity of topics covered. A set of 14 keywords were used to filter the dataset. The keywords are bioinformatics, biology, microbiology, notype, genus, phylum, taxonomy, prokaryote, bacteria, fungi, fungal, virus, eukaryote, and gene. This results in a total of 571 prompts from xxx prompts in the dataset. The prompt length was then calculated with the removal of special characters and “stop_words” (https://rdrr.io/cran/tidytext/man/stop_words.html). The distribution of the length is shown in Fig3. The frequency of the words from the prompt are shown in Fig4.
+We begin by summarizing the characteristics of the conversations that remained after applying our filtering criteria. This analysis provides an overview of the types of discussions that were successfully identified as bioinformatics-related, including the frequency and diversity of topics covered [Figure2]. A set of 14 keywords were used to filter the dataset. The keywords are bioinformatics, biology, microbiology, notype, genus, phylum, taxonomy, prokaryote, bacteria, fungi, fungal, virus, eukaryote, and gene. This results in a total of 571 prompts from xxx prompts in the dataset. The prompt length was then calculated with the removal of special characters and “stop_words” (https://rdrr.io/cran/tidytext/man/stop_words.html). The distribution of the length is shown in Fig3. The frequency of the words from the prompt are shown in Fig4.
 
 ![Histogram showing the length of the prompts calculated with the removal of special characters and “stop_words”. \label{Fig3}](./fig3.pdf)
 
@@ -114,6 +114,8 @@ The prompts were categorized into different keywords with the inclusion of a “
 Our evaluation of the model performance involved analyzing how well it handled the bioinformatics queries compared to the baseline model in the WildChat dataset. This section details the strengths and weaknesses in generating relevant and accurate responses.
 
 We also compared the DBCLS model with other models, focusing on their performance in biological reasoning and the quality of their responses to bioinformatics-related queries. This comparison provided a benchmark for understanding how well different models address the biological and health science topics. 
+
+### List of model used in this study
 
 | Short Identifier | Full Model Name | Description | reference |
 | ------------ | ----------- | --------------- | ------------- |
@@ -136,7 +138,7 @@ We also compared the DBCLS model with other models, focusing on their performanc
 
 The evaluation included an assessment of each model's capabilities in reasoning about biological concepts, handling complex queries, and generating informative responses. This comparison helps to contextualize the DBCLS model's performance within the broader landscape of conversational AI in bioinformatics. We generated embeddings for each response from the filtered dataset using Mixed Bread AI Large v1 [@citesAsAuthority:emb2024mxbai] via the Hugging Face sentence transformers library. We then used these embeddings to generate distance calculations to the original response from WildChat. In addition, Levenshtein distance was used to compare responses from models to the original response.
 
-![This box plot shows the distribution of Levenshtein distances from the original response provided by ChatGPT-4 as part of the WildChat dataset. Notably, the Llama3-8b and Mistral AI 7b models showed the greatest divergence from the baseline model. In addition, it appears that the GPT-3.5 Turbo model generated responses that conformed well to the baseline.”. \label{Fig7}](./fig7.pdf)
+![This box plot shows the distribution of Levenshtein distances from the original response provided by ChatGPT-4 as part of the WildChat dataset. Notably, the Llama3-8b and Mistral AI 7b models showed the greatest divergence from the baseline model. In addition, it appears that the GPT-3.5 Turbo model generated responses that conformed well to the baseline. \label{Fig7}](./fig7.pdf)
 
 ## Characterizing Model Responses
 
