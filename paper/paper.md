@@ -117,7 +117,7 @@ We also compared the DBCLS model with other models, focusing on their performanc
 | ------------ | ----------- | --------------- | ------------- |
 | gpt-35-turbo | GPT-3.5 Turbo | A variant of GPT-3.5 designed for improved speed and cost-efficiency in generating text. | [@citesAsAuthority:brown2020languagemodelsfewshotlearners] |
 | gpt-4o | GPT-4 Optimized | An optimized version of GPT-4, offering enhanced performance for various language tasks. | [@citesAsAuthority:openai2024gpt4o] |
-| gpt-4 | GPT-4 | The fourth-generation GPT model, known for its advanced understanding and generation abilities. | https://arxiv.org/pdf/2303.08774 [@citesAsAuthority:openai2024gpt4technicalreport] |
+| gpt-4 | GPT-4 | The fourth-generation GPT model, known for its advanced understanding and generation abilities. | [@citesAsAuthority:openai2024gpt4technicalreport] |
 | claude3opus | Claude 3 Opus | A variant of Claude 3 designed for comprehensive and general-purpose conversational tasks. | [@citesAsAuthority:claude3] |
 | claude3sonnet5 | Claude Sonnet 3.5 | An enhanced version Anthropic Claude 3 Sonnet with improvements in text generation and comprehension. | [@citesAsAuthority:claude3] |
 | claude3sonnet | Claude 3 Sonnet | A Claude model variant | [@citesAsAuthority:claude3] |
