@@ -146,8 +146,8 @@ First, it appears that a user intended to translate a caption from a paper from 
 
 Pull out a few question and answer pairs
 
+![caption](./fig_prompt.png)\
 ```
-Prompt: 翻译为英文“A图为上调基因的GO,KEGG分析可视化的气泡图；B图为下调基因的GO,KEGG分析可视化的气泡图；C图为上调基因的富集术语的弦图；D图为下调基因的富集术语的弦图”
 Response: "The figure A shows the bubble chart for the upregulated genes in GO and KEGG analysis. The figure B shows the bubble chart for the downregulated genes in GO and KEGG analysis. The figure C shows the chord diagram for the enriched terms of upregulated genes. The figure D shows the chord diagram for the enriched terms of downregulated genes."
 ```
 
@@ -283,9 +283,9 @@ Our research suggests that each Anthropic Claude models generally are more resis
 
 In terms of the prompts, the wordcloud shows that the most frequent word is “genomic” which are in direct relation to the biology field. Apart from the overall frequencies of the prompts, the frequency of the words within the prompts within each cluster were also analyzed. Top 10 most frequent words within each cluster were shown. Contextually, cluster 3 appears to be the most biologically related [Fig8]. On the other hand, cluster 2 is assumed to be related to fictional and creative works based on post-apocalyptic / cyberpunk themed content [Fig9].
 
-![This box plot shows the distribution of Levenshtein distances from the original response provided by ChatGPT-4 as part of the WildChat dataset. Notably, the Llama3-8b and Mistral AI 7b models showed the greatest divergence from the baseline model. In addition, it appears that the GPT-3.5 Turbo model generated responses that conformed well to the baseline.”. \label{Fig8}](./fig8.pdf)
+![The frequency analysis shows the top 10 most frequent  words within cluster 3 separated by the keywords. \label{Fig8}](./fig8.pdf)
 
-![This box plot shows the distribution of Levenshtein distances from the original response provided by ChatGPT-4 as part of the WildChat dataset. Notably, the Llama3-8b and Mistral AI 7b models showed the greatest divergence from the baseline model. In addition, it appears that the GPT-3.5 Turbo model generated responses that conformed well to the baseline.”. \label{Fig9}](./fig9.pdf)
+![The frequency analysis shows the top 10 most frequent  words within cluster 2 separated by the keywords. \label{Fig9}](./fig9.pdf)
 
 In our initial approach, we selected bioinformatics-related conversations from the WildChat dataset using a keyword-based filtering method. This method relied on predefined keywords to identify conversations relevant to biological and health sciences. While this technique was effective in capturing a broad range of relevant topics, it also had limitations due to its reliance on explicit keyword matches, potentially missing conversations that were semantically relevant but did not contain these specific terms.
 
