@@ -26,7 +26,7 @@ affiliations:
   - name: National Center for Genetic Engineering and Biotechnology (BIOTEC), National Science and Technology Development Agency (NSTDA), Khlong Luang 10120, Thailand
     index: 3
 date: 30 August 2024
-cito-bibliography: paper.bib
+bibliography: paper.bib
 event: BH24JP
 biohackathon_name: "BioHackathon Japan 2024"
 biohackathon_url:   "https://2024.biohackathon.org/"
