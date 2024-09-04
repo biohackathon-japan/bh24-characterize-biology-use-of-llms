@@ -21,7 +21,7 @@ authors:
 affiliations:
   - name: University of California, Santa Cruz Genomics Institute, 1156 High St Santa Cruz, CA 95064
     index: 1
-  - name: Database Center for Life Science (DBCLS), Japan
+  - name: Database Center for Life Science (DBCLS), Joint Support-Center for Data Science Research, Research Organization of Information and Systems, Chiba 277-0871, Japan
     index: 2
   - name: National Center for Genetic Engineering and Biotechnology (BIOTEC), National Science and Technology Development Agency (NSTDA), Khlong Luang 10120, Thailand
     index: 3
