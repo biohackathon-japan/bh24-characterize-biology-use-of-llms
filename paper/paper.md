@@ -63,8 +63,6 @@ By addressing these limitations and expanding the scope of conversational datase
 
 # Dataset and Filtering
 
-![This figure outlines the analysis and software used. The WildChat dataset was filtered using hand-selected keywords. These prompts were then used to generate responses from a variety of other models. The prompts and responses were vectorized using a sentence embedding model, which were used in performing the analysis of the original and newly generated data. \label{Fig1}](./fig1.pdf)
-
 The WildChat dataset, with its extensive collection of user-chatbot interactions, provides a rich resource for analyzing conversational patterns and exploring specialized domains such as bioinformatics. This dataset includes over a million conversations, capturing a diverse range of topics and user queries, making it a valuable tool for filtering and examining conversations relevant to biological and health sciences.
 
 To identify conversations pertinent to bioinformatics, we employed a keyword-based filtering process. The initial phase involved selecting keywords believed to be relevant to biological research. These initial keywords included terms commonly associated with bioinformatics, such as "genome," "virus," and "bioinformatics." The intent was to capture a broad spectrum of conversations related to these topics.
@@ -74,6 +72,8 @@ However, as the filtering process progressed, we encountered challenges with cer
 The refinement process involved iteratively adjusting our keyword selection based on the relevance of the filtered conversations. We employed additional techniques, including semantic analysis using sentence-transformers [@reimers2019sentencebertsentenceembeddingsusing], to assess the alignment of the conversations with bioinformatics topics. This approach helped in filtering out noise and ensuring that the resulting dataset was more focused on the biological and health science domains.
 
 Through these efforts, we aimed to create a curated subset of the WildChat dataset that better aligns with the objectives of our study, providing a more targeted foundation for subsequent analysis and model evaluation. [Figure1]
+
+![This figure outlines the analysis and software used. The WildChat dataset was filtered using hand-selected keywords. These prompts were then used to generate responses from a variety of other models. The prompts and responses were vectorized using a sentence embedding model, which were used in performing the analysis of the original and newly generated data. \label{Fig1}](./fig1.pdf)
 
 # Methods
 
@@ -93,15 +93,15 @@ We selected several models for comparison, including both established and experi
 
 ## Filtered Dataset Analysis
 
-![Language embeddings of prompts were used to create a t-SNE. Hand curation of topics showed grouping of languages and topics. We found that our topic of interest was mostly represented between math, physics/chemistry, and health categories. \label{Fig2}](./fig2.pdf)
-
 We begin by summarizing the characteristics of the conversations that remained after applying our filtering criteria. This analysis provides an overview of the types of discussions that were successfully identified as bioinformatics-related, including the frequency and diversity of topics covered [Figure2]. A set of 14 keywords were used to filter the dataset. The keywords are bioinformatics, biology, microbiology, notype, genus, phylum, taxonomy, prokaryote, bacteria, fungi, fungal, virus, eukaryote, and gene. This results in a total of 571 prompts from xxx prompts in the dataset. The prompt length was then calculated with the removal of special characters and “stop_words” (https://rdrr.io/cran/tidytext/man/stop_words.html). The distribution of the length is shown in Fig3. The frequency of the words from the prompt are shown in Fig4.
+
+The prompts were categorized into different keywords with the inclusion of a “multi” group where there are multiple matches with the keywords. The embedded prompts were filtered for unique embedding, which resulted in 137 prompts in total. The prompts were projected onto the 2D plane using t-SNE [Fig5]. Distance between the represented points were calculated using Euclidean distances [Fig6]. The dendrogram cut-off was heuristically selected at the height of 67 to subset the prompts into 7 clusters. The language-space analysis revealed insightful patterns in how the prompts are distributed and related within the bioinformatics context. By examining the semantic similarities among the prompts, we identified clusters of related topics and assessed the coherence of the filtered dataset with our bioinformatics objectives. This analysis also highlighted the effectiveness of our filtering approach and revealed any potential gaps in the data.
+
+![Language embeddings of prompts were used to create a t-SNE. Hand curation of topics showed grouping of languages and topics. We found that our topic of interest was mostly represented between math, physics/chemistry, and health categories. \label{Fig2}](./fig2.pdf)
 
 ![Histogram showing the length of the prompts calculated with the removal of special characters and “stop_words”. \label{Fig3}](./fig3.pdf)
 
 ![Wordcloud showing the frequency of words within the prompts. \label{Fig4}](./fig4.pdf)
-
-The prompts were categorized into different keywords with the inclusion of a “multi” group where there are multiple matches with the keywords. The embedded prompts were filtered for unique embedding, which resulted in 137 prompts in total. The prompts were projected onto the 2D plane using t-SNE [Fig5]. Distance between the represented points were calculated using Euclidean distances [Fig6]. The dendrogram cut-off was heuristically selected at the height of 67 to subset the prompts into 7 clusters. The language-space analysis revealed insightful patterns in how the prompts are distributed and related within the bioinformatics context. By examining the semantic similarities among the prompts, we identified clusters of related topics and assessed the coherence of the filtered dataset with our bioinformatics objectives. This analysis also highlighted the effectiveness of our filtering approach and revealed any potential gaps in the data.
 
 ![t-SNE plot of the projected unique embedded prompts. Different colors represent different keyword groups. \label{Fig5}](./fig5.pdf)
 
@@ -337,13 +337,13 @@ Our research suggests that Anthropic Claude models are generally more resistant 
 
 In terms of the prompts, the wordcloud shows that the most frequent word is “genomic” which is in direct relation to the biology field. Apart from the overall frequencies of the prompts, the frequency of the words within the prompts within each cluster was also analyzed. The top 10 most frequent words within each cluster were shown. Contextually, cluster 3 appears to be the most biologically related [Fig8]. On the other hand, cluster 2 is assumed to be related to fictional and creative works based on post-apocalyptic / cyberpunk themed content [Fig9].
 
-![The frequency analysis shows the top 10 most frequent  words within cluster 3 separated by the keywords. \label{Fig8}](./fig8.pdf)
-
-![The frequency analysis shows the top 10 most frequent  words within cluster 2 separated by the keywords. \label{Fig9}](./fig9.pdf)
-
 In our initial approach, we selected bioinformatics-related conversations from the WildChat dataset using a keyword-based filtering method. This method relied on predefined keywords to identify conversations relevant to biological and health sciences. While this technique was effective in capturing a broad range of relevant topics, it also had limitations due to its reliance on explicit keyword matches, potentially missing conversations that were semantically relevant but did not contain these specific terms.
 
 Using an embedding model in the first step could have significantly improved the keyword selection process by capturing the semantic relationships between words and phrases. Embedding models, such as those based on transformer architectures, create vector representations of text that encode the context and meaning of words in a continuous vector space. This approach allows for a more nuanced understanding of language, identifying conversations that are contextually related to bioinformatics topics even if they do not contain exact keyword matches.
+
+![The frequency analysis shows the top 10 most frequent  words within cluster 3 separated by the keywords. \label{Fig8}](./fig8.pdf)
+
+![The frequency analysis shows the top 10 most frequent  words within cluster 2 separated by the keywords. \label{Fig9}](./fig9.pdf)
 
 ## Overall Performance and Model Comparison
 
