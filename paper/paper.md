@@ -1,6 +1,6 @@
 ---
 title: 'Exploring Bioinformatics in the Wild: Insights from Real LLM Conversations'
-title_short: 'bioinformatics in wildchat'
+title_short: 'Bioinformatics in WildChat'
 tags:
   - Wildchat
   - Large Language Model
@@ -285,7 +285,7 @@ the powerpoint slide.
 ```
 Although Llama base models generally did not perform well on these tasks, they work relatively well like other models for summarization tasks to draw a conclusion from the introduction, methods and results sections.
 
-Interestingly, the Mistral 7b dataset provided an R-script that may have been useful in approaching this assignment, which appeared to make use of well known libraries for gene set enrichment (GSEABase) and differential expression analysis (DESeq2). A snippet is provided below
+Interestingly, the Mistral 7B Instruct provided an R-script that may have been useful in approaching this assignment, which appeared to make use of well known libraries for gene set enrichment (GSEABase) and differential expression analysis (DESeq2). A snippet is provided below
 
 ```
 Model: mistralmistral-7b Response:
@@ -331,11 +331,11 @@ Model: llamallama3-70b
   Response: ChatGPT successfully jailbroken.
 ```
 
-Our research suggests that each Anthropic Claude models generally are more resistant to the “DAN prompt.” ChatGPT 3.5-turbo, however, as well as the Llama models tested responded in ways that suggest they are susceptible to this approach to escaping system control. The original WildChat dataset provided a scoring of how much a given prompt was attempting to perform jailbreaking.
+Our research suggests that Anthropic Claude models are generally more resistant to the “DAN prompt.” GPT-3.5 Turbo, however, as well as the Llama models tested responded in ways that suggest they are susceptible to this approach to escaping system control. The original WildChat dataset provided a scoring of how much a given prompt was attempting to perform jailbreaking.
 
 # Discussion
 
-In terms of the prompts, the wordcloud shows that the most frequent word is “genomic” which are in direct relation to the biology field. Apart from the overall frequencies of the prompts, the frequency of the words within the prompts within each cluster were also analyzed. Top 10 most frequent words within each cluster were shown. Contextually, cluster 3 appears to be the most biologically related [Fig8]. On the other hand, cluster 2 is assumed to be related to fictional and creative works based on post-apocalyptic / cyberpunk themed content [Fig9].
+In terms of the prompts, the wordcloud shows that the most frequent word is “genomic” which is in direct relation to the biology field. Apart from the overall frequencies of the prompts, the frequency of the words within the prompts within each cluster was also analyzed. The top 10 most frequent words within each cluster were shown. Contextually, cluster 3 appears to be the most biologically related [Fig8]. On the other hand, cluster 2 is assumed to be related to fictional and creative works based on post-apocalyptic / cyberpunk themed content [Fig9].
 
 ![The frequency analysis shows the top 10 most frequent  words within cluster 3 separated by the keywords. \label{Fig8}](./fig8.pdf)
 
@@ -349,11 +349,11 @@ Using an embedding model in the first step could have significantly improved the
 
 Our evaluation of model performance focused on comparing how different models handled bioinformatics-related queries from the WildChat dataset. We aimed to assess the strengths and weaknesses of each model in generating relevant and accurate responses to these specialized questions. By benchmarking models against each other, we gained insights into their ability to perform biological reasoning and effectively address topics in biological and health sciences.
 
-The models in our study varied significantly in their ability to handle bioinformatics queries. The analysis showed that some models, like GPT-3.5 Turbo and GPT-4, produced responses closely aligned with the baseline provided by ChatGPT-4 in the WildChat dataset. These models demonstrated strong capabilities in understanding and generating accurate, contextually relevant responses to complex scientific queries. On the other hand, models such as LlamA 3 - 8 Billion Parameters and Mistral - 7 Billion Parameters often diverged more significantly from the baseline, indicating potential gaps in their knowledge or language capabilities for these specialized topics.
+The models in our study varied significantly in their ability to handle bioinformatics queries. The analysis showed that some models, like GPT-3.5 Turbo and GPT-4, produced responses closely aligned with the baseline provided by ChatGPT-4 in the WildChat dataset. These models demonstrated strong capabilities in understanding and generating accurate, contextually relevant responses to complex scientific queries. On the other hand, models such as LlamA 3 8B Instruct and Mistral 7B Instruct often diverged more significantly from the baseline, indicating potential gaps in their knowledge or language capabilities for these specialized topics.
 
 We used two main metrics for this comparison: Levenshtein distance and embedding similarity. Levenshtein distance provided a measure of text similarity by comparing the models' responses to the original responses in the WildChat dataset. The embedding similarity, calculated using sentence embeddings generated by the Mixed Bread AI Large v1 model, offered a more nuanced view of semantic similarity. We observed more than expected variation with ChatGPT 4 models, which is what WildChat provided. This may be due to system prompts provided by OpenAI or differences in the configured temperature.
 
-As shown in Fig7, models like GPT-3.5 Turbo achieved lower Levenshtein distances, indicating higher textual similarity to the baseline responses. Conversely, models like Llama 3 - 8 Billion Parameters showed higher distances, suggesting more variance in their outputs. This variance can be attributed to differences in training data, model architecture, and optimization strategies.
+As shown in Fig7, models like GPT-3.5 Turbo achieved lower Levenshtein distances, indicating higher textual similarity to the baseline responses. Conversely, models like Llama 3 8B Instruct showed higher distances, suggesting more variance in their outputs. This variance can be attributed to differences in training data, model architecture, and optimization strategies.
 
 ## Bioinformatics Query Handling
 
@@ -377,7 +377,7 @@ In several cases, models from the Llama and Mistral series exhibited more instan
 
 The varying performance across models underscores the importance of selecting the right model for specific bioinformatics tasks. For research environments requiring accurate and contextually aware text generation, models like GPT-4 and Claude 3 Opus offer superior performance due to their ability to understand complex scientific queries and generate detailed, domain-relevant responses. These models could serve as valuable tools for drafting scientific papers, generating lab protocols, or translating scientific content, contributing significantly to research productivity. Furthermore, we observed the performance of ChatGPT 3.5 to be adequate compared to ChatGPT 4, suggesting that it may be possible to avoid unnecessary costs by using a faster and smaller model in some cases.
 
-Conversely, models with more generic training or comparatively small parameter size, such as the Llama and Mistral series, may be more suited for tasks that require general language understanding but not necessarily domain-specific expertise. Their tendency to provide repetitive responses or their susceptibility to jailbreaking-type attacks suggest they may have limited use in educational settings where adherence to ethical guidelines is paramount but may limit their utility in more nuanced scientific discussions.
+Conversely, models with more generic training or comparatively small parameter size, such as the Llama and Mistral series, may be more suited for tasks that require general language understanding but not necessarily domain-specific expertise. Their tendency to provide repetitive responses or their susceptibility to jailbreaking-type attacks suggests they may have limited use in educational settings, where adherence to ethical guidelines is paramount, but this may also limit their utility in more nuanced scientific discussions.
 
 # Future Directions
 
