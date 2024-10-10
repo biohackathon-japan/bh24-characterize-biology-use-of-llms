@@ -132,9 +132,9 @@ We also compared the DBCLS model with other models, focusing on their performanc
 | llamallama3-8b | Llama 3 8B Instruct | A smaller model in the Llama 3 series with 8 billion parameters, optimized for efficiency. | [@dubey2024llama3herdmodels] |
 | llamallama2-70b | Llama 2 Chat 70B | An earlier model in the Llama series, featuring 70 billion parameters for a range of tasks. | [@touvron2023llama2openfoundation] |
 | llamallama2-13b | Llama 2 Chat 13B | A mid-sized model from the Llama 2 series with 13 billion parameters, balancing power and cost. | [@touvron2023llama2openfoundation] |
-| mistralmistral-7b | Mistral 7B Instruct | A compact model from the Mistral series with 7 billion parameters, focused on effective NLP. | [@jiang2024mixtralexperts] |
+| mistralmistral-7b | Mistral 7B Instruct | A compact model from the Mistral series with 7 billion parameters, focused on effective NLP. | [@mistral7b] |
 | mistralmixtral-8x7b | Mixtral 8x7B Instruct | An ensemble model combining eight 7-billion parameter models from the Mistral series. | [@jiang2024mixtralexperts] |
-| mistralmistral-large | Mistral Large | A more extensive model in the Mistral series with enhanced capabilities for diverse applications. | [@jiang2024mixtralexperts]  |
+| mistralmistral-large | Mistral Large | A more extensive model in the Mistral series with enhanced capabilities for diverse applications. | [@mistrallarge]  |
 
 The evaluation included an assessment of each model's capabilities in reasoning about biological concepts, handling complex queries, and generating informative responses. This comparison helps to contextualize the DBCLS model's performance within the broader landscape of conversational AI in bioinformatics. We generated embeddings for each response from the filtered dataset using Mixed Bread AI Large v1 [@emb2024mxbai] via the Hugging Face sentence transformers library. We then used these embeddings to generate distance calculations to the original response from WildChat. In addition, Levenshtein distance was used to compare responses from models to the original response.
 
