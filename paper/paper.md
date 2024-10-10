@@ -189,7 +189,7 @@ Model gpt-4o Response:
   - Final extension at 72°C for 5 minutes
 ```
 
-It is also worth noting the accuracy of the Claude 3 Opus model in correctly retrieving the RefSNP ID of two variants on the APOE gene when responding to the genotyping query. An extract of the response is provided below (our emphasis):
+It is also worth noting the accuracy of the Claude 3 Opus model in correctly retrieving the RefSNP ID of two variants on the APOE gene when responding to the genotyping query. An extract of the response is provided below:
 
 ```
 Model: claude3opus Response:
@@ -223,7 +223,7 @@ an error. Moreover, there were no bands at all and the problem was low
 concentration of genomic DNA. 
 ```
 
-Another notable prompt where a user pastes what appears to be the content of an assignmen (note the bold portion, our emphasis)t:
+Another notable prompt where a user pastes what appears to be the content of an assignment:
 
 ```
 Prompt:
