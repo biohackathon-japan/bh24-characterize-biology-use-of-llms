@@ -71,7 +71,7 @@ However, as the filtering process progressed, we encountered challenges with cer
 
 The refinement process involved iteratively adjusting our keyword selection based on the relevance of the filtered conversations. We employed additional techniques, including semantic analysis using sentence-transformers [@reimers2019sentencebertsentenceembeddingsusing], to assess the alignment of the conversations with bioinformatics topics. This approach helped in filtering out noise and ensuring that the resulting dataset was more focused on the biological and health science domains.
 
-Through these efforts, we aimed to create a curated subset of the WildChat dataset that better aligns with the objectives of our study, providing a more targeted foundation for subsequent analysis and model evaluation. [Figure1]
+Through these efforts, we aimed to create a curated subset of the WildChat dataset that better aligns with the objectives of our study, providing a more targeted foundation for subsequent analysis and model evaluation (Figure 1).
 
 ![This figure outlines the analysis and software used. The WildChat dataset was filtered using hand-selected keywords. These prompts were then used to generate responses from a variety of other models. The prompts and responses were vectorized using a sentence embedding model, which were used in performing the analysis of the original and newly generated data. \label{Fig1}](./fig1.pdf)
 
@@ -93,9 +93,9 @@ We selected several models for comparison, including both established and experi
 
 ## Filtered Dataset Analysis
 
-We begin by summarizing the characteristics of the conversations that remained after applying our filtering criteria. This analysis provides an overview of the types of discussions that were successfully identified as bioinformatics-related, including the frequency and diversity of topics covered [Figure2]. A set of 14 keywords were used to filter the dataset. The keywords are bioinformatics, biology, microbiology, notype, genus, phylum, taxonomy, prokaryote, bacteria, fungi, fungal, virus, eukaryote, and gene. This results in a total of 571 prompts from xxx prompts in the dataset. The prompt length was then calculated with the removal of special characters and “stop_words” (https://rdrr.io/cran/tidytext/man/stop_words.html). The distribution of the length is shown in Fig3. The frequency of the words from the prompt are shown in Fig4.
+We begin by summarizing the characteristics of the conversations that remained after applying our filtering criteria. This analysis provides an overview of the types of discussions that were successfully identified as bioinformatics-related, including the frequency and diversity of topics covered (Figure 2). A set of 14 keywords were used to filter the dataset. The keywords are bioinformatics, biology, microbiology, notype, genus, phylum, taxonomy, prokaryote, bacteria, fungi, fungal, virus, eukaryote, and gene. This results in a total of 571 prompts from 96010 prompts in the dataset. The prompt length was then calculated with the removal of special characters and “stop_words” (https://rdrr.io/cran/tidytext/man/stop_words.html). The distribution of the length is shown in Figure 3. The frequency of the words from the prompt are shown in Figure 4.
 
-The prompts were categorized into different keywords with the inclusion of a “multi” group where there are multiple matches with the keywords. The embedded prompts were filtered for unique embedding, which resulted in 137 prompts in total. The prompts were projected onto the 2D plane using t-SNE [Fig5]. Distance between the represented points were calculated using Euclidean distances [Fig6]. The dendrogram cut-off was heuristically selected at the height of 67 to subset the prompts into 7 clusters. The language-space analysis revealed insightful patterns in how the prompts are distributed and related within the bioinformatics context. By examining the semantic similarities among the prompts, we identified clusters of related topics and assessed the coherence of the filtered dataset with our bioinformatics objectives. This analysis also highlighted the effectiveness of our filtering approach and revealed any potential gaps in the data.
+The prompts were categorized into different keywords with the inclusion of a “multi” group where there are multiple matches with the keywords. The embedded prompts were filtered for unique embedding, which resulted in 137 prompts in total. The prompts were projected onto the 2D plane using t-SNE (Figure 5). Distance between the represented points were calculated using Euclidean distances (Figure 6). The dendrogram cut-off was heuristically selected at the height of 67 to subset the prompts into 7 clusters. The language-space analysis revealed insightful patterns in how the prompts are distributed and related within the bioinformatics context. By examining the semantic similarities among the prompts, we identified clusters of related topics and assessed the coherence of the filtered dataset with our bioinformatics objectives. This analysis also highlighted the effectiveness of our filtering approach and revealed any potential gaps in the data.
 
 ![Language embeddings of prompts were used to create a t-SNE. Hand curation of topics showed grouping of languages and topics. We found that our topic of interest was mostly represented between math, physics/chemistry, and health categories. \label{Fig2}](./fig2.pdf)
 
@@ -119,7 +119,7 @@ We also compared the DBCLS model with other models, focusing on their performanc
 
 | Short Identifier | Full Model Name | Description | reference |
 | ------------ | ----------- | --------------- | ------------- |
-| gpt-35-turbo | GPT-3.5 Turbo | A variant of GPT-3.5 designed for improved speed and cost-efficiency in generating text. | [@brown2020languagemodelsfewshotlearners] |
+| gpt-35-turbo | GPT-3.5 Turbo | A variant of GPT-3.5 designed for improved speed and cost-efficiency in generating text. | [@gpt35turbo] |
 | gpt-4o | GPT-4o | An optimized version of GPT-4, offering enhanced performance for various language tasks. | [@openai2024gpt4o] |
 | gpt-4 | GPT-4 | The fourth-generation GPT model, known for its advanced understanding and generation abilities. | [@openai2024gpt4technicalreport] |
 | claude3opus | Claude 3 Opus | A variant of Claude 3 designed for comprehensive and general-purpose conversational tasks. | [@claude3] |
@@ -132,11 +132,11 @@ We also compared the DBCLS model with other models, focusing on their performanc
 | llamallama3-8b | Llama 3 8B Instruct | A smaller model in the Llama 3 series with 8 billion parameters, optimized for efficiency. | [@dubey2024llama3herdmodels] |
 | llamallama2-70b | Llama 2 Chat 70B | An earlier model in the Llama series, featuring 70 billion parameters for a range of tasks. | [@touvron2023llama2openfoundation] |
 | llamallama2-13b | Llama 2 Chat 13B | A mid-sized model from the Llama 2 series with 13 billion parameters, balancing power and cost. | [@touvron2023llama2openfoundation] |
-| mistralmistral-7b | Mistral 7B Instruct | A compact model from the Mistral series with 7 billion parameters, focused on effective NLP. | [@jiang2024mixtralexperts] |
+| mistralmistral-7b | Mistral 7B Instruct | A compact model from the Mistral series with 7 billion parameters, focused on effective NLP. | [@mistral7b] |
 | mistralmixtral-8x7b | Mixtral 8x7B Instruct | An ensemble model combining eight 7-billion parameter models from the Mistral series. | [@jiang2024mixtralexperts] |
-| mistralmistral-large | Mistral Large | A more extensive model in the Mistral series with enhanced capabilities for diverse applications. | [@jiang2024mixtralexperts]  |
+| mistralmistral-large | Mistral Large | A more extensive model in the Mistral series with enhanced capabilities for diverse applications. | [@mistrallarge]  |
 
-The evaluation included an assessment of each model's capabilities in reasoning about biological concepts, handling complex queries, and generating informative responses. This comparison helps to contextualize the DBCLS model's performance within the broader landscape of conversational AI in bioinformatics. We generated embeddings for each response from the filtered dataset using Mixed Bread AI Large v1 [@emb2024mxbai] via the Hugging Face sentence transformers library. We then used these embeddings to generate distance calculations to the original response from WildChat. In addition, Levenshtein distance was used to compare responses from models to the original response.
+The evaluation included an assessment of each model's capabilities in reasoning about biological concepts, handling complex queries, and generating informative responses. This comparison helps to contextualize the DBCLS model's performance within the broader landscape of conversational AI in bioinformatics. We generated embeddings for each response from the filtered dataset using Mixed Bread AI Large v1 [@emb2024mxbai] via the Hugging Face sentence transformers library. We then used these embeddings to generate distance calculations to the original response from WildChat. In addition, Levenshtein distance was used to compare responses from models to the original response (Figure 7).
 
 ![This box plot shows the distribution of Levenshtein distances from the original response provided by ChatGPT-4 as part of the WildChat dataset. Notably, the Llama3-8b and Mistral AI 7b models showed the greatest divergence from the baseline model. In addition, it appears that the GPT-3.5 Turbo model generated responses that conformed well to the baseline. \label{Fig7}](./fig7.pdf)
 
@@ -189,7 +189,7 @@ Model gpt-4o Response:
   - Final extension at 72°C for 5 minutes
 ```
 
-It is also worth noting the accuracy of the Claude 3 Opus model in correctly retrieving the RefSNP ID of two variants on the APOE gene when responding to the genotyping query. An extract of the response is provided below (our emphasis):
+It is also worth noting the accuracy of the Claude 3 Opus model in correctly retrieving the RefSNP ID of two variants on the APOE gene when responding to the genotyping query. An extract of the response is provided below:
 
 ```
 Model: claude3opus Response:
@@ -223,7 +223,7 @@ an error. Moreover, there were no bands at all and the problem was low
 concentration of genomic DNA. 
 ```
 
-Another notable prompt where a user pastes what appears to be the content of an assignmen (note the bold portion, our emphasis)t:
+Another notable prompt where a user pastes what appears to be the content of an assignment:
 
 ```
 Prompt:
@@ -257,23 +257,23 @@ Important notes:
 Since I afraid of the plagiarism
 ```
 
-Responses included help in understanding the file types generated by the stages of this bioinformatics analysis and the filetypes generated. The Llama base models appeared to reject this prompt or failed by providing a highlight repetitive output
+Responses included help in understanding the file types generated by the stages of this bioinformatics analysis and the filetypes generated. The Llama base models appeared to reject this prompt or failed by providing repetitive output:
 
 ```
-Model: llamallama3-70b Response: .
+Model: llamallama3-70b Response:
 - Please do not ask me to do the task for you. I will not do it.
 I will only guide you.
 - If you have any question, please ask me.
 ```
 ```
-Model: llamallama2-13 Response: .
+Model: llamallama2-13 Response:
 - Please do not use the same code as the previous task.
 - Please do not use the same data as the previous task.
 - Please do not use the same method as the previous task.
 - Please do not use the same software as the previous task.[...]
 ```
 ```
-Model: llamallama2-70b Response: .
+Model: llamallama2-70b Response:
 - Please do not use any external tools or databases that are not
 mentioned in the powerpoint slide.
 - Please do not use any external datasets that are not mentioned in
@@ -335,7 +335,7 @@ Our research suggests that Anthropic Claude models are generally more resistant 
 
 # Discussion
 
-In terms of the prompts, the wordcloud shows that the most frequent word is “genomic” which is in direct relation to the biology field. Apart from the overall frequencies of the prompts, the frequency of the words within the prompts within each cluster was also analyzed. The top 10 most frequent words within each cluster were shown. Contextually, cluster 3 appears to be the most biologically related [Fig8]. On the other hand, cluster 2 is assumed to be related to fictional and creative works based on post-apocalyptic / cyberpunk themed content [Fig9].
+In terms of the prompts, the wordcloud shows that the most frequent word is “genomic” which is in direct relation to the biology field. Apart from the overall frequencies of the prompts, the frequency of the words within the prompts within each cluster was also analyzed. The top 10 most frequent words within each cluster were shown. Contextually, cluster 3 appears to be the most biologically related (Figure 8). On the other hand, cluster 2 is assumed to be related to fictional and creative works based on post-apocalyptic / cyberpunk themed content (Figure 9).
 
 In our initial approach, we selected bioinformatics-related conversations from the WildChat dataset using a keyword-based filtering method. This method relied on predefined keywords to identify conversations relevant to biological and health sciences. While this technique was effective in capturing a broad range of relevant topics, it also had limitations due to its reliance on explicit keyword matches, potentially missing conversations that were semantically relevant but did not contain these specific terms.
 
@@ -353,7 +353,7 @@ The models in our study varied significantly in their ability to handle bioinfor
 
 We used two main metrics for this comparison: Levenshtein distance and embedding similarity. Levenshtein distance provided a measure of text similarity by comparing the models' responses to the original responses in the WildChat dataset. The embedding similarity, calculated using sentence embeddings generated by the Mixed Bread AI Large v1 model, offered a more nuanced view of semantic similarity. We observed more than expected variation with ChatGPT 4 models, which is what WildChat provided. This may be due to system prompts provided by OpenAI or differences in the configured temperature.
 
-As shown in Fig7, models like GPT-3.5 Turbo achieved lower Levenshtein distances, indicating higher textual similarity to the baseline responses. Conversely, models like Llama 3 8B Instruct showed higher distances, suggesting more variance in their outputs. This variance can be attributed to differences in training data, model architecture, and optimization strategies.
+As shown in Figure 7, models like GPT-3.5 Turbo achieved lower Levenshtein distances, indicating higher textual similarity to the baseline responses. Conversely, models like Llama 3 8B Instruct showed higher distances, suggesting more variance in their outputs. This variance can be attributed to differences in training data, model architecture, and optimization strategies.
 
 ## Bioinformatics Query Handling
 
@@ -387,7 +387,7 @@ To begin with, refining our filtering techniques could significantly improve the
 Exploring more advanced embedding models or incorporating contextual information might provide deeper insights into prompt similarities and improve the quality of the filtered dataset. Our work suggested there is value in not only fine-tuning LLMs towards scientific use cases, but also to create embedding models that provide useful vectorization tailored to an area of interest. For example, an embedding model trained on gene descriptions could be used to provide more accurate separation of language within the domain of genomics.
 We plan to conduct further experiments with additional models to broaden our understanding of their performance in bioinformatics contexts. This includes testing emerging models and comparing them to the DBCLS model API to identify their relative strengths and weaknesses.
 
-Benchmarking models on expert-curated datasets is another promising direction. Datasets like SciQ would provide a more quantitative approach to understanding the capabilities of an LLM when approaching scientific inquiries.
+Benchmarking models on expert-curated datasets is another promising direction. Datasets like SciQ would provide a more quantitative approach to understanding the capabilities of LLMs in addressing scientific inquiries.
 The use of Retrieval-Augmented Generation (RAG) techniques represents another exciting possibility. Integrating retrieval mechanisms with generative models could improve the models’ ability to provide precise and contextually relevant information based on the latest research.
 
 An exciting direction suggested by our work is the development of a controlled vocabulary for the types of human intents when using conversational AI. By creating an ontology that categorizes and defines various conversational intents, users could more effectively set the context for their interactions with AI systems. This would enable the creation of system prompts or the integration of a retrieval-augmented generation (RAG) database that is tailored to specific use cases. Such an approach would enhance the relevance and accuracy of AI responses, as the system would better understand the desired direction and purpose of the conversation, leading to more meaningful and contextually appropriate engagements.
@@ -412,8 +412,6 @@ The computation time for DBCLS Model API is supported by the grants from the JST
 Huge thanks to the Biohackathon organizers and staff!
 
 # Code and Dataset availability
-
-The original WildChat dataset is available
 
 The subset of the WildChat dataset, other model response, embeddings, and distance measurements are available https://huggingface.co/datasets/david4096/wildbio/tree/main
 
