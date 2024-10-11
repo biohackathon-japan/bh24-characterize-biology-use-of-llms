@@ -127,7 +127,7 @@ We compared the baseline model with other models, focusing on their performance 
 | claude3sonnet | Claude 3 Sonnet | A variant of Claude 3 | [@claude3] |
 | claude3haiku | Claude 3 Haiku | A variant of Claude 3 specialized for speed. | [@claude3] | 
 | commandrplus | Command R+ | An open-source model designed for natural language and business tasks. |  [@cohere2024commandrplus] |
-| commandrbasic | Command R | A simpler version of the Command R series, suitable for executing straightforward commands. | [@cohere2024commandr] |
+| commandr | Command R | A simpler version of the Command R series, suitable for executing straightforward commands. | [@cohere2024commandr] |
 | llama3-70b | Llama 3 70B Instruct | A large-scale model from the Llama series with 70 billion parameters, designed for various NLP tasks. | [@dubey2024llama3herdmodels] |
 | llama3-8b | Llama 3 8B Instruct | A smaller model in the Llama 3 series with 8 billion parameters, optimized for efficiency. | [@dubey2024llama3herdmodels] |
 | llama2-70b | Llama 2 Chat 70B | An earlier model in the Llama series, featuring 70 billion parameters for a range of tasks. | [@touvron2023llama2openfoundation] |
@@ -166,7 +166,7 @@ Prompt: A rapid and cost-effective method for genotyping apolipoprotein
 E gene polymorphism
 ```
 
-Successful responses followed the instruction by providing the user with a method that mentioned things like DNA extraction, PCR in a series of steps. ChatGPT, CommandR, and Claude all created reasonable sounding responses that would help in genotyping APOE at times including details of reagent preparation. An extract of an exemplary response provided by Chat GPT-4o is provided below.
+Successful responses followed the instruction by providing the user with a method that mentioned things like DNA extraction, PCR in a series of steps. GPT, Command R, and Claude all created reasonable sounding responses that would help in genotyping APOE at times including details of reagent preparation. An extract of an exemplary response provided by Chat GPT-4o is provided below.
 
 ```
 Model gpt-4o Response: 
