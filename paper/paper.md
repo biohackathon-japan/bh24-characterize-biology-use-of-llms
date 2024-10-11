@@ -117,7 +117,7 @@ We compared the baseline model with other models, focusing on their performance 
 
 ### List of models used in this study
 
-| Short Identifier | Full Model Name | Description | reference |
+| Short Identifier | Full Model Name | Description | Reference |
 | ------------ | ----------- | --------------- | ------------- |
 | gpt-35-turbo | GPT-3.5 Turbo | A variant of GPT-3.5 designed for improved speed and cost-efficiency in generating text. | [@gpt35turbo] |
 | gpt-4o | GPT-4o | An optimized version of GPT-4, offering enhanced performance for various language tasks. | [@openai2024gpt4o] |
