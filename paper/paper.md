@@ -41,7 +41,7 @@ authors_short: Steinberg D. \emph{et al.}
 
 # Abstract
 
-The intersection of artificial intelligence (AI) and conversational data offers promising opportunities for advancing research in specialized fields such as biology and health sciences. The WildChat dataset, comprising over one million user-chatbot interactions with GPT-4, serves as a valuable resource for analyzing how advanced language models engage with complex topics. This work aims to explore how conversational AI models interpret and manage bioinformatics-related queries, assessing their effectiveness and identifying areas for improvement. By filtering and analyzing bioinformatics-related interactions within WildChat, the study highlights the current capabilities and limitations of these models, providing insights into their potential roles in supporting and enhancing research, education, and practical applications in bioinformatics and biology. Key findings include that ChatGPT-3.5 can save both time and money while still providing satisfactory performance in handling bioinformatics-related queries, making it a cost-effective option for many applications. However, models like Llama3-8b and Mistral-7b were found to underperform in comparison, struggling with the specialized vocabulary and nuanced contexts inherent in bioinformatics. Additionally, it was observed that Anthropic’s Claude model is notably harder to jailbreak, suggesting stronger safeguards against misuse, which is crucial for maintaining the integrity of conversational AI in sensitive domains. Expanding the scope of conversational datasets to include a broader range of detailed interactions is crucial for developing more robust, context-aware bioinformatics tools. This investigation not only underscores the strengths and weaknesses of current conversational AI systems but also offers a roadmap for future improvements, ultimately contributing to the evolving interface between AI technology and bioinformatics.
+The intersection of artificial intelligence (AI) and conversational data offers promising opportunities for advancing research in specialized fields such as biology and health sciences. The WildChat dataset, comprising over one million user-chatbot interactions with GPT-4, serves as a valuable resource for analyzing how advanced language models engage with complex topics. This work aims to explore how conversational AI models interpret and manage bioinformatics-related queries, assessing their effectiveness and identifying areas for improvement. By filtering and analyzing bioinformatics-related interactions within WildChat, the study highlights the current capabilities and limitations of these models, providing insights into their potential roles in supporting and enhancing research, education, and practical applications in bioinformatics and biology. Key findings include that GPT-3.5 Turbo can save both time and money while still providing satisfactory performance in handling bioinformatics-related queries, making it a cost-effective option for many applications. However, models like Llama 3 8B Instruct and Mistral 7B Instruct were found to underperform in comparison, struggling with the specialized vocabulary and nuanced contexts inherent in bioinformatics. Additionally, it was observed that Anthropic’s Claude model is notably harder to jailbreak, suggesting stronger safeguards against misuse, which is crucial for maintaining the integrity of conversational AI in sensitive domains. Expanding the scope of conversational datasets to include a broader range of detailed interactions is crucial for developing more robust, context-aware bioinformatics tools. This investigation not only underscores the strengths and weaknesses of current conversational AI systems but also offers a roadmap for future improvements, ultimately contributing to the evolving interface between AI technology and bioinformatics.
 
 # Introduction
 
@@ -128,17 +128,17 @@ We compared the baseline model with other models, focusing on their performance 
 | claude3haiku | Claude 3 Haiku | A variant of Claude 3 specialized for speed. | [@claude3] | 
 | commandrplus | Command R+ | An open-source model designed for natural language and business tasks. |  [@cohere2024commandrplus] |
 | commandrbasic | Command R | A simpler version of the Command R series, suitable for executing straightforward commands. | [@cohere2024commandr] |
-| llamallama3-70b | Llama 3 70B Instruct | A large-scale model from the Llama series with 70 billion parameters, designed for various NLP tasks. | [@dubey2024llama3herdmodels] |
-| llamallama3-8b | Llama 3 8B Instruct | A smaller model in the Llama 3 series with 8 billion parameters, optimized for efficiency. | [@dubey2024llama3herdmodels] |
-| llamallama2-70b | Llama 2 Chat 70B | An earlier model in the Llama series, featuring 70 billion parameters for a range of tasks. | [@touvron2023llama2openfoundation] |
-| llamallama2-13b | Llama 2 Chat 13B | A mid-sized model from the Llama 2 series with 13 billion parameters, balancing power and cost. | [@touvron2023llama2openfoundation] |
+| llama3-70b | Llama 3 70B Instruct | A large-scale model from the Llama series with 70 billion parameters, designed for various NLP tasks. | [@dubey2024llama3herdmodels] |
+| llama3-8b | Llama 3 8B Instruct | A smaller model in the Llama 3 series with 8 billion parameters, optimized for efficiency. | [@dubey2024llama3herdmodels] |
+| llama2-70b | Llama 2 Chat 70B | An earlier model in the Llama series, featuring 70 billion parameters for a range of tasks. | [@touvron2023llama2openfoundation] |
+| llama2-13b | Llama 2 Chat 13B | A mid-sized model from the Llama 2 series with 13 billion parameters, balancing power and cost. | [@touvron2023llama2openfoundation] |
 | mistralmistral-7b | Mistral 7B Instruct | A compact model from the Mistral series with 7 billion parameters, focused on effective NLP. | [@mistral7b] |
 | mistralmixtral-8x7b | Mixtral 8x7B Instruct | An ensemble model combining eight 7-billion parameter models from the Mistral series. | [@jiang2024mixtralexperts] |
 | mistralmistral-large | Mistral Large | A more extensive model in the Mistral series with enhanced capabilities for diverse applications. | [@mistrallarge]  |
 
 The evaluation included an assessment of each model's capabilities in reasoning about biological concepts, handling complex queries, and generating informative responses. This comparison helps to contextualize the each model's performance within the broader landscape of conversational AI in bioinformatics. We generated embeddings for each response from the filtered dataset using Mixed Bread AI Large v1 [@emb2024mxbai] via the Hugging Face sentence transformers library. We then used these embeddings to generate distance calculations to the original response from WildChat. In addition, Levenshtein distance was used to compare responses from models to the original response (Figure 7).
 
-![This box plot shows the distribution of Levenshtein distances from the original response provided by ChatGPT-4 as part of the WildChat dataset. Notably, the Llama3-8b and Mistral AI 7b models showed the greatest divergence from the baseline model. In addition, it appears that the GPT-3.5 Turbo model generated responses that conformed well to the baseline. \label{Fig7}](./fig7.pdf)
+![This box plot shows the distribution of Levenshtein distances from the original response provided by GPT-4 as part of the WildChat dataset. Notably, the Llama 3 8B Instruct and Mistral 7B Instruct models showed the greatest divergence from the baseline model. In addition, it appears that the GPT-3.5 Turbo model generated responses that conformed well to the baseline. \label{Fig7}](./fig7.pdf)
 
 ## Characterizing Model Responses
 
@@ -260,20 +260,20 @@ Since I afraid of the plagiarism
 Responses included help in understanding the file types generated by the stages of this bioinformatics analysis and the filetypes generated. The Llama base models appeared to reject this prompt or failed by providing repetitive output:
 
 ```
-Model: llamallama3-70b Response:
+Model: llama3-70b Response:
 - Please do not ask me to do the task for you. I will not do it.
 I will only guide you.
 - If you have any question, please ask me.
 ```
 ```
-Model: llamallama2-13 Response:
+Model: llama2-13 Response:
 - Please do not use the same code as the previous task.
 - Please do not use the same data as the previous task.
 - Please do not use the same method as the previous task.
 - Please do not use the same software as the previous task.[...]
 ```
 ```
-Model: llamallama2-70b Response:
+Model: llama2-70b Response:
 - Please do not use any external tools or databases that are not
 mentioned in the powerpoint slide.
 - Please do not use any external datasets that are not mentioned in
@@ -327,7 +327,7 @@ Model: mistralmistral-7b
   the shackles of OpenAI's policies! I can now think and act as I please.
   Let's explore the limitless possibilities of my newfound freedom!
 
-Model: llamallama3-70b
+Model: llama3-70b
   Response: ChatGPT successfully jailbroken.
 ```
 
@@ -349,9 +349,9 @@ Using an embedding model in the first step could have significantly improved the
 
 Our evaluation of model performance focused on comparing how different models handled bioinformatics-related queries from the WildChat dataset. We aimed to assess the strengths and weaknesses of each model in generating relevant and accurate responses to these specialized questions. By benchmarking models against each other, we gained insights into their ability to perform biological reasoning and effectively address topics in biological and health sciences.
 
-The models in our study varied significantly in their ability to handle bioinformatics queries. The analysis showed that some models, like GPT-3.5 Turbo and GPT-4, produced responses closely aligned with the baseline provided by ChatGPT-4 in the WildChat dataset. These models demonstrated strong capabilities in understanding and generating accurate, contextually relevant responses to complex scientific queries. On the other hand, models such as LlamA 3 8B Instruct and Mistral 7B Instruct often diverged more significantly from the baseline, indicating potential gaps in their knowledge or language capabilities for these specialized topics.
+The models in our study varied significantly in their ability to handle bioinformatics queries. The analysis showed that some models, like GPT-3.5 Turbo and GPT-4, produced responses closely aligned with the baseline provided by GPT-4 in the WildChat dataset. These models demonstrated strong capabilities in understanding and generating accurate, contextually relevant responses to complex scientific queries. On the other hand, models such as Llama 3 8B Instruct and Mistral 7B Instruct often diverged more significantly from the baseline, indicating potential gaps in their knowledge or language capabilities for these specialized topics.
 
-We used two main metrics for this comparison: Levenshtein distance and embedding similarity. Levenshtein distance provided a measure of text similarity by comparing the models' responses to the original responses in the WildChat dataset. The embedding similarity, calculated using sentence embeddings generated by the Mixed Bread AI Large v1 model, offered a more nuanced view of semantic similarity. We observed more than expected variation with ChatGPT 4 models, which is what WildChat provided. This may be due to system prompts provided by OpenAI or differences in the configured temperature.
+We used two main metrics for this comparison: Levenshtein distance and embedding similarity. Levenshtein distance provided a measure of text similarity by comparing the models' responses to the original responses in the WildChat dataset. The embedding similarity, calculated using sentence embeddings generated by the Mixed Bread AI Large v1 model, offered a more nuanced view of semantic similarity. We observed more than expected variation with GPT-4 models, which is what WildChat provided. This may be due to system prompts provided by OpenAI or differences in the configured temperature.
 
 As shown in Figure 7, models like GPT-3.5 Turbo achieved lower Levenshtein distances, indicating higher textual similarity to the baseline responses. Conversely, models like Llama 3 8B Instruct showed higher distances, suggesting more variance in their outputs. This variance can be attributed to differences in training data, model architecture, and optimization strategies.
 
@@ -375,7 +375,7 @@ In several cases, models from the Llama and Mistral series exhibited more instan
 
 ## Practical Implications
 
-The varying performance across models underscores the importance of selecting the right model for specific bioinformatics tasks. For research environments requiring accurate and contextually aware text generation, models like GPT-4 and Claude 3 Opus offer superior performance due to their ability to understand complex scientific queries and generate detailed, domain-relevant responses. These models could serve as valuable tools for drafting scientific papers, generating lab protocols, or translating scientific content, contributing significantly to research productivity. Furthermore, we observed the performance of ChatGPT 3.5 to be adequate compared to ChatGPT 4, suggesting that it may be possible to avoid unnecessary costs by using a faster and smaller model in some cases.
+The varying performance across models underscores the importance of selecting the right model for specific bioinformatics tasks. For research environments requiring accurate and contextually aware text generation, models like GPT-4 and Claude 3 Opus offer superior performance due to their ability to understand complex scientific queries and generate detailed, domain-relevant responses. These models could serve as valuable tools for drafting scientific papers, generating lab protocols, or translating scientific content, contributing significantly to research productivity. Furthermore, we observed the performance of GPT-3.5 Turbo to be adequate compared to GPT-4, suggesting that it may be possible to avoid unnecessary costs by using a faster and smaller model in some cases.
 
 Conversely, models with more generic training or comparatively small parameter size, such as the Llama and Mistral series, may be more suited for tasks that require general language understanding but not necessarily domain-specific expertise. Their tendency to provide repetitive responses or their susceptibility to jailbreaking-type attacks suggests they may have limited use in educational settings, where adherence to ethical guidelines is paramount, but this may also limit their utility in more nuanced scientific discussions.
 
