@@ -81,9 +81,9 @@ Through these efforts, we aimed to create a curated subset of the WildChat datas
 
 To gain insights into the conversational similarities within the filtered subset of the WildChat dataset, we utilized sentence-transformers. This technique involves embedding prompts and responses into a high-dimensional language space, allowing us to measure semantic similarities between them. By mapping the user prompts onto this space, we could analyze their relative positions and identify clusters of related topics within the bioinformatics domain. This analysis provided valuable information on how closely related different conversations are in terms of their content and language use, and helped us assess whether the prompts fell within the expected thematic areas of bioinformatics. It also revealed patterns and correlations that informed our understanding of the dataset's focus.
 
-## Querying DBCLS Model API
+## Querying the DBCLS LLM Server
 
-The next step in our methodology involved leveraging the experimental API developed by DBCLS to query various models with the filtered prompts. The API was developed in Python using the Flask framework and exposed six endpoints, including `gpt`, `gemini`, `claude3`, `commandr`, `llama`, and `mistral`, which accept the POST method with model parameters and interact with specific models. The backend of the `gpt` endpoint interacts with OpenAI services deployed on Microsoft Azure. The backend of the `gemini` endpoint interacts with Gemini on Google Cloud. The backends of the other endpoints interact with Amazon Bedrock. For all models, the `temperature` is set to 0, and `max_tokens` are set to 2048. For the purposes of this research, models were provided an empty system prompt when this option was made available. 
+The next step in our methodology involved leveraging the LLM server developed by DBCLS to query various models with the filtered prompts. The server and its API were implemented in Python using the Flask framework and exposed six endpoints, including `gpt`, `gemini`, `claude3`, `commandr`, `llama`, and `mistral`, which accept the POST method with model parameters and interact with specific models. The backend of the `gpt` endpoint interacts with OpenAI services deployed on Microsoft Azure. The backend of the `gemini` endpoint interacts with Gemini on Google Cloud. The backends of the other endpoints interact with Amazon Bedrock. For all models, the `temperature` is set to 0, and `max_tokens` are set to 2048. For the purposes of this research, models were provided an empty system prompt when this option was made available. 
 
 In this phase, we designed our queries to explore the capability of different models to handle bioinformatics-related conversations. The queries were crafted based on the refined set of keywords and prompts identified during the filtering process, aiming to cover a range of bioinformatics topics and evaluate how effectively different models could address these queries.
 
@@ -107,13 +107,13 @@ The prompts were categorized into different keywords with the inclusion of a “
 
 ![caption](./fig6.pdf)\
 
-![my Distances between different embedded prompts represented with a heatmap (top) and a dendrogram (bottom). Both x and y axes of the heatmap were labeled with the keywords using different colors. The cut-off for the dendrogram was heuristically selected at 67 to subset the prompts into 7 clusters, 1 to 7 from left to right”. \label{Fig6}](./fig6_2.pdf)
+![Distances between different embedded prompts represented with a heatmap (top) and a dendrogram (bottom). Both x and y axes of the heatmap were labeled with the keywords using different colors. The cut-off for the dendrogram was heuristically selected at 67 to subset the prompts into 7 clusters, 1 to 7 from left to right”. \label{Fig6}](./fig6_2.pdf)
 
 ## Model Comparison
 
 Our evaluation of the model performance involved analyzing how well it handled the bioinformatics queries compared to the baseline model in the WildChat dataset. This section details the strengths and weaknesses in generating relevant and accurate responses.
 
-We also compared the DBCLS model with other models, focusing on their performance in biological reasoning and the quality of their responses to bioinformatics-related queries. This comparison provided a benchmark for understanding how well different models address the biological and health science topics. 
+We compared the baseline model with other models, focusing on their performance in biological reasoning and the quality of their responses to bioinformatics-related queries. This comparison provided a benchmark for understanding how well different models address the biological and health science topics. 
 
 ### List of models used in this study
 
@@ -136,7 +136,7 @@ We also compared the DBCLS model with other models, focusing on their performanc
 | mistralmixtral-8x7b | Mixtral 8x7B Instruct | An ensemble model combining eight 7-billion parameter models from the Mistral series. | [@jiang2024mixtralexperts] |
 | mistralmistral-large | Mistral Large | A more extensive model in the Mistral series with enhanced capabilities for diverse applications. | [@mistrallarge]  |
 
-The evaluation included an assessment of each model's capabilities in reasoning about biological concepts, handling complex queries, and generating informative responses. This comparison helps to contextualize the DBCLS model's performance within the broader landscape of conversational AI in bioinformatics. We generated embeddings for each response from the filtered dataset using Mixed Bread AI Large v1 [@emb2024mxbai] via the Hugging Face sentence transformers library. We then used these embeddings to generate distance calculations to the original response from WildChat. In addition, Levenshtein distance was used to compare responses from models to the original response (Figure 7).
+The evaluation included an assessment of each model's capabilities in reasoning about biological concepts, handling complex queries, and generating informative responses. This comparison helps to contextualize the each model's performance within the broader landscape of conversational AI in bioinformatics. We generated embeddings for each response from the filtered dataset using Mixed Bread AI Large v1 [@emb2024mxbai] via the Hugging Face sentence transformers library. We then used these embeddings to generate distance calculations to the original response from WildChat. In addition, Levenshtein distance was used to compare responses from models to the original response (Figure 7).
 
 ![This box plot shows the distribution of Levenshtein distances from the original response provided by ChatGPT-4 as part of the WildChat dataset. Notably, the Llama3-8b and Mistral AI 7b models showed the greatest divergence from the baseline model. In addition, it appears that the GPT-3.5 Turbo model generated responses that conformed well to the baseline. \label{Fig7}](./fig7.pdf)
 
@@ -385,7 +385,7 @@ Looking ahead, there are several avenues for enhancing our work and expanding it
 To begin with, refining our filtering techniques could significantly improve the precision of finding bioinformatics-related queries. Future efforts could focus on developing more sophisticated keyword selection methods, leveraging domain-specific ontologies, or incorporating advanced natural language processing tools to better capture relevant conversations. For bioinformatics-related keywords, the topic list from bioinformatics conferences such as ISMB may be useful. In the future we would like to use terms from controlled vocabularies such as the Gene Ontology (GO) and the Experimental Factor Ontology (EFO).
 
 Exploring more advanced embedding models or incorporating contextual information might provide deeper insights into prompt similarities and improve the quality of the filtered dataset. Our work suggested there is value in not only fine-tuning LLMs towards scientific use cases, but also to create embedding models that provide useful vectorization tailored to an area of interest. For example, an embedding model trained on gene descriptions could be used to provide more accurate separation of language within the domain of genomics.
-We plan to conduct further experiments with additional models to broaden our understanding of their performance in bioinformatics contexts. This includes testing emerging models and comparing them to the DBCLS model API to identify their relative strengths and weaknesses.
+We plan to conduct further experiments with additional models to broaden our understanding of their performance in bioinformatics contexts. This includes testing emerging models and comparing them by leveraging the DBCLS LLM server and its API to identify their relative strengths and weaknesses.
 
 Benchmarking models on expert-curated datasets is another promising direction. Datasets like SciQ would provide a more quantitative approach to understanding the capabilities of LLMs in addressing scientific inquiries.
 The use of Retrieval-Augmented Generation (RAG) techniques represents another exciting possibility. Integrating retrieval mechanisms with generative models could improve the models’ ability to provide precise and contextually relevant information based on the latest research.
@@ -399,15 +399,15 @@ Finally, our work has broader implications for biological and health science res
 
 In conclusion, this study has demonstrated the potential of the WildChat dataset for advancing bioinformatics and health science research. Through a meticulous filtering process and innovative analysis using sentence-transformers, we successfully identified and examined bioinformatics-related conversations within this vast dataset. Our findings highlight the value of leveraging real-world conversational data to explore complex biological topics and assess the capabilities of various models in this domain.
 
-Our analysis of the filtered dataset and subsequent comparisons with models queried through the DBCLS API have provided valuable insights into the performance of different language models. These insights not only underscore the strengths and limitations of current models but also pave the way for future improvements in biological reasoning and conversational AI applications.
+Our analysis of the filtered dataset and subsequent comparisons with models queried through the DBCLS LLM server have provided valuable insights into the performance of different language models. These insights not only underscore the strengths and limitations of current models but also pave the way for future improvements in biological reasoning and conversational AI applications.
 
-The contributions of this work extend beyond the immediate findings. By showcasing the effectiveness of the WildChat dataset and the DBCLS model API in bioinformatics, we provide a foundation for further research and development in this area. Our approach offers a novel methodology for extracting and analyzing domain-specific information from large-scale conversational data, which can be adapted and applied to various other fields of study.
+The contributions of this work extend beyond the immediate findings. By showcasing the effectiveness of the WildChat dataset and the DBCLS LLM server in bioinformatics, we provide a foundation for further research and development in this area. Our approach offers a novel methodology for extracting and analyzing domain-specific information from large-scale conversational data, which can be adapted and applied to various other fields of study.
 
 Our analysis of the WildChat dataset suggests numerous future studies in conversational AI and bioinformatics, including deeper analysis of the WildChat dataset. The potential to refine filtering techniques, enhance language-space analysis, and exploring new model architectures opens possibilities for ongoing research and application. Ultimately, this work underscores the importance of integrating advanced AI technologies with domain-specific knowledge to drive innovation and progress in biological and health science research.
 
 # Acknowledgements
 
-The computation time for DBCLS Model API is supported by the grants from the JST/NBDC database project.
+The computation time for the DBCLS LLM server is supported by grants from the JST/NBDC database project.
 
 Huge thanks to the Biohackathon organizers and staff!
 
