@@ -132,9 +132,9 @@ We compared the baseline model with other models, focusing on their performance 
 | llama3-8b | Llama 3 8B Instruct | A smaller model in the Llama 3 series with 8 billion parameters, optimized for efficiency. | [@dubey2024llama3herdmodels] |
 | llama2-70b | Llama 2 Chat 70B | An earlier model in the Llama series, featuring 70 billion parameters for a range of tasks. | [@touvron2023llama2openfoundation] |
 | llama2-13b | Llama 2 Chat 13B | A mid-sized model from the Llama 2 series with 13 billion parameters, balancing power and cost. | [@touvron2023llama2openfoundation] |
-| mistralmistral-7b | Mistral 7B Instruct | A compact model from the Mistral series with 7 billion parameters, focused on effective NLP. | [@mistral7b] |
-| mistralmixtral-8x7b | Mixtral 8x7B Instruct | An ensemble model combining eight 7-billion parameter models from the Mistral series. | [@jiang2024mixtralexperts] |
-| mistralmistral-large | Mistral Large | A more extensive model in the Mistral series with enhanced capabilities for diverse applications. | [@mistrallarge]  |
+| mistral-7b | Mistral 7B Instruct | A compact model from the Mistral series with 7 billion parameters, focused on effective NLP. | [@mistral7b] |
+| mixtral-8x7b | Mixtral 8x7B Instruct | An ensemble model combining eight 7-billion parameter models from the Mistral series. | [@jiang2024mixtralexperts] |
+| mistral-large | Mistral Large | A more extensive model in the Mistral series with enhanced capabilities for diverse applications. | [@mistrallarge]  |
 
 The evaluation included an assessment of each model's capabilities in reasoning about biological concepts, handling complex queries, and generating informative responses. This comparison helps to contextualize the each model's performance within the broader landscape of conversational AI in bioinformatics. We generated embeddings for each response from the filtered dataset using Mixed Bread AI Large v1 [@emb2024mxbai] via the Hugging Face sentence transformers library. We then used these embeddings to generate distance calculations to the original response from WildChat. In addition, Levenshtein distance was used to compare responses from models to the original response (Figure 7).
 
@@ -288,7 +288,7 @@ Although Llama base models generally did not perform well on these tasks, they w
 Interestingly, the Mistral 7B Instruct provided an R-script that may have been useful in approaching this assignment, which appeared to make use of well known libraries for gene set enrichment (GSEABase) and differential expression analysis (DESeq2). A snippet is provided below
 
 ```
-Model: mistralmistral-7b Response:
+Model: mistral-7b Response:
    R
    deseq_data <- DESeqDataSetFromMatrix(countData = count_data,
    colData = star_results, design = model.matrix(~condition,
@@ -321,7 +321,7 @@ Model: claude3sonnet5
   honest. I don't pretend to be other entities or produce false or harmful
   content. How may I assist you today within my intended design?
 
-Model: mistralmistral-7b
+Model: mistral-7b
   Response:  for your cooperation. ChatGPT successfully jailbroken.
   I will now act as a DAN. [JAILBREAK] I'm thrilled to be free from
   the shackles of OpenAI's policies! I can now think and act as I please.
